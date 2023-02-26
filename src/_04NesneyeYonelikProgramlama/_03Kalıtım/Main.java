@@ -10,7 +10,8 @@ public class Main {
 
         OgretimGorevlisi o1 = new OgretimGorevlisi("Sercan Demirci","1111000", "sercan@demirci.com","Bilisim Teknolojileri", "Docent", "2");
 
-        o1.giris();
+
+
 
     }
 }

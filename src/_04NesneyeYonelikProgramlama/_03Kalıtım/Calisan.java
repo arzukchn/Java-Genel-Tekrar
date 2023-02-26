@@ -46,4 +46,7 @@ public class Calisan {
     public void yemekhane(){
         System.out.println(this.adSoyad + " Yemekhaneye girdi");
     }
+
 }
+
+

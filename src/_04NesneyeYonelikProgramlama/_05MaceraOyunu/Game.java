@@ -16,5 +16,32 @@ public class Game {
         System.out.println("Lutfen bir karakter seciniz !");
         player.selectChar();
 
+        Location location = null;
+        while (true){
+            player.printInfo();
+            System.out.println();
+            System.out.println("************* Bolgeler *************");
+            System.out.println();
+            System.out.println("1 - Guvenli Ev --> Burasi sizin icin guvenlidir.");
+            System.out.println("2 - Magaza --> Silah veya zirh satin alabilirisiniz.");
+            System.out.print("Lutfen gitmek istediginiz bolgeyi seciniz!");
+            int selectLoc = input.nextInt();
+            switch (selectLoc){
+                case 1:
+                    location = new SafeHouse(player);
+                    break;
+                case 2:
+                    location = new ToolStore(player);
+                    break;
+                default:
+                    location = new SafeHouse(player);
+            }
+            System.out.println(location.getName());
+            //Basta ! olması kosulun "false" döndüğünde çalışacağını gösteriyor.
+            if (!location.onLocation()){
+                System.out.println("GAME OVER!");
+                break;
+            }
+        }
     }
 }

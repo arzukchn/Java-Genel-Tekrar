@@ -5,20 +5,22 @@ Java ile metin tabanlı bir macera oyunu yapıyoruz.
 
 KARAKTERLER
 
-![](../../../../../Users/Toshiba/AppData/Local/Temp/download.png)
+![download](https://user-images.githubusercontent.com/76787125/221427122-e430395b-09d0-4c20-a669-4c257bc461cb.png)
+
 
 CANAVARLAR
 
-![](../../../../../Users/Toshiba/AppData/Local/Temp/download.png)
+![download](https://user-images.githubusercontent.com/76787125/221427134-8913596a-b062-4c31-abe6-7497210e6cc9.png)
+
 
 SİLAHLAR
 
-![](../../../../../Users/Toshiba/AppData/Local/Temp/download.png)
+![download](https://user-images.githubusercontent.com/76787125/221427142-cbc715b3-341a-413d-a80f-c6b61fd11230.png)
+
 
 ZIRHLAR
 
-![](../../../../../Users/Toshiba/AppData/Local/Temp/download.png)
-
+![download](https://user-images.githubusercontent.com/76787125/221427155-3ff4f2f3-03de-4610-a61f-dba455aebc91.png)
 
 MEKANLAR
 
@@ -52,4 +54,4 @@ MEKANLAR
 
 <h1> Sınıf Diyagramı </h1>
 
-![](../../../../../Users/Toshiba/AppData/Local/Temp/class-diagram.jpg)
+![class-diagram](https://user-images.githubusercontent.com/76787125/221427162-9f56c7ca-b63a-4510-9668-73cdcd922783.jpg)

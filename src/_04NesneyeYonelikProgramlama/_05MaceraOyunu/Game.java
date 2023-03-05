@@ -24,19 +24,27 @@ public class Game {
             System.out.println();
             System.out.println("1 - Guvenli Ev --> Burasi sizin icin guvenlidir.");
             System.out.println("2 - Magaza --> Silah veya zirh satin alabilirisiniz.");
+            System.out.println("0 - Cikis Yap --> Oyunu Sonlandir.");
             System.out.print("Lutfen gitmek istediginiz bolgeyi seciniz!");
             int selectLoc = input.nextInt();
             switch (selectLoc){
+                case 0:
+                    location = null;
+                    break;
                 case 1:
                     location = new SafeHouse(player);
                     break;
                 case 2:
                     location = new ToolStore(player);
                     break;
+
                 default:
                     location = new SafeHouse(player);
             }
-            System.out.println(location.getName());
+            if(location == null){
+                System.out.println("Bu karanlik ve sisli adadan cabuk vazgectin...");
+                break;
+            }
             //Basta ! olması kosulun "false" döndüğünde çalışacağını gösteriyor.
             if (!location.onLocation()){
                 System.out.println("GAME OVER!");

@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Player {
     private int damage;
     private int health;
+    private int orjinalHealth;
     private int money;
     private String charName;
     private String name;
@@ -60,6 +61,7 @@ public class Player {
     public void initPlayer(GameChar gameChar){
         this.setDamage(gameChar.getDamage());
         this.setHealth(gameChar.getHealth());
+        this.setOrjinalHealth(gameChar.getHealth());
         this.setMoney(gameChar.getMoney());
         this.setName(gameChar.getName());
     }
@@ -69,14 +71,18 @@ public class Player {
                 "Silahiniz : " + this.getInventory().getWeapon().getName() +
                         ", Zirhiniz : " + this.getInventory().getArmor().getName() +
                         ", Blocklama : " + this.getInventory().getArmor().getBlock() +
-                        ", Hasariniz : "  + this.getDamage() +
+                        ", Hasariniz : "  + this.getTotalDamage() +
                         ", Saglik : " + this.getHealth() +
                         ", Para : " + this.getMoney()
         );
     }
 
+    public int getTotalDamage(){
+        return damage + this.getInventory().getWeapon().getDamage();
+    }
+
     public int getDamage() {
-        return damage + getInventory().getWeapon().getDamage();
+        return damage;
     }
 
     public void setDamage(int damage) {
@@ -88,6 +94,9 @@ public class Player {
     }
 
     public void setHealth(int health) {
+        if(health <0){
+            health =0;
+        }
         this.health = health;
     }
 
@@ -115,6 +124,14 @@ public class Player {
         this.name = name;
     }
 
+    public int getOrjinalHealth() {
+        return orjinalHealth;
+    }
+
+    public void setOrjinalHealth(int orjinalHealth) {
+        this.orjinalHealth = orjinalHealth;
+    }
+
     public Inventory getInventory() {
         return inventory;
     }
@@ -122,4 +139,5 @@ public class Player {
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
+
 }

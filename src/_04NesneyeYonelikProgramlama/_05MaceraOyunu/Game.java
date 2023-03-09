@@ -14,6 +14,7 @@ public class Game {
         Player player = new Player("Muhammet");
         System.out.println("Sayin " + player.getName() + " Bu karanlik ve sisli adaya hosgeldiniz !");
         System.out.println("Lutfen bir karakter seciniz !");
+        System.out.println("---------------------------------------------------------------------------------------------------");
         player.selectChar();
 
         Location location = null;

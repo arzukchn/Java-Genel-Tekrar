@@ -1,4 +1,4 @@
-package _14PatikaStoreÖdevi;
+package _14FikstürOluşturmaÖdevi;
 
 import java.util.ArrayList;
 import java.util.Collections;

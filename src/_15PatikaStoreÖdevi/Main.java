@@ -20,10 +20,16 @@ public class Main {
         //Yapacağımız işlemi seçeceğimiz panel
         int select;
         boolean duration = true;
-        while (duration){
-            System.out.print("\n 1 - Marka Listesi \n 2 - Telefon \n 3 - Notebook \n 4 - Ürün Ekle \n 5 - Ürün Sil \n 6 - Çıkış yap \n  Seçim yapınız: ");
+        while (duration) {
+            System.out.print("\n 1 - Marka Listesi \n" +
+                    " 2 - Telefon \n" +
+                    " 3 - Notebook \n" +
+                    " 4 - Ürün Ekle \n" +
+                    " 5 - Ürün Sil \n" +
+                    " 6 - Çıkış yap \n" +
+                    "  Seçim yapınız: ");
             select = sc.nextInt();
-            switch (select){
+            switch (select) {
                 case 1 -> listedBrands(brandNames);
                 case 2 -> listedTelephone(telephones);
                 case 3 -> listedNotebook(notebooks);
@@ -35,27 +41,45 @@ public class Main {
     }
 
     //Silme işlemi yaptığımız kısım
-    private static void delete(List<Telephone> telephones, List<Notebook> notebooks){
+    private static void delete(List<Telephone> telephones, List<Notebook> notebooks) {
         System.out.println("Lütfen silmek istediğiniz ürünü seçiniz : \n" +
                 "1 - Telefon \n" +
                 "2 - Notebook \n" +
                 "Lütfen Seçiminizi Giriniz : ");
         int select = sc.nextInt();
-        switch (select){
+        switch (select) {
             case 1 -> {
                 listedTelephone(telephones);
                 System.out.println("Lütfen silmek istediğiniz telefon id'sini giriniz: ");
                 int id = sc.nextInt();
-                telephones.removeIf(telephone -> telephone.getId() == id);
+                telephones.removeIf(telephone -> {
+                    if (telephone.getId() == id) {
+                        System.out.println(id + "idsine sahip telefon silindi");
+                    }
+                    if (telephone.getId() != id) {
+                        System.out.println("Geçersiz id lütfen tekrar deneyiniz.");
+                    }
+                    return true;
+                });
             }
-            case 2 ->{
+            case 2 -> {
                 listedNotebook(notebooks);
                 System.out.println("Silmek istediğiniz notebook id'sini giriniz: ");
                 int id = sc.nextInt();
-                notebooks.removeIf(notebook -> notebook.getId() == id);
+                notebooks.removeIf(notebook -> {
+                    if (notebook.getId() == id) {
+                        System.out.println(id + "idsine sahip notebook silindi");
+                    }
+                    if (notebook.getId() != id) {
+                        System.out.println("Geçersiz id lütfen tekrar deneyiniz.");
+                    }
+                    return true;
+                });
             }
         }
     }
+
+
 
     //ürün ekleme yaptığımız kısım
     private static void addProduct(List<String> brandNames, List<Telephone> telephones, List<Notebook> notebooks) {

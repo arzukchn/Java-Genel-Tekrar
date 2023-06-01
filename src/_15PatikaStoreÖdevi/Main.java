@@ -83,7 +83,7 @@ public class Main {
 
     //ürün ekleme yaptığımız kısım
     private static void addProduct(List<String> brandNames, List<Telephone> telephones, List<Notebook> notebooks) {
-        System.out.println("Lütfen silmek istediğiniz ürünü seçiniz : \n" +
+        System.out.println("Lütfen ekleme yapmak istediğiniz ürünü seçiniz : \n" +
                 "1 - Telefon \n" +
                 "2 - Notebook \n" +
                 "Lütfen Seçiminizi Giriniz : ");

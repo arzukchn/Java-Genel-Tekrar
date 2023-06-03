@@ -107,4 +107,5 @@ public class User {
     public boolean checkPassword(String password){
         return this.password.equals(password);
     }
+
 }

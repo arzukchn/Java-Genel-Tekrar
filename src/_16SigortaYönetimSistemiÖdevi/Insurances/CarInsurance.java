@@ -11,7 +11,7 @@ public class CarInsurance extends Insurance{
     private boolean coverageForDrivers;
     private boolean coverageForPassengers;
 
-    public CarInsurance(String name, double price, LocalDate startDate, LocalDate endDate, String carMake, String carModel, int carAge, boolean coverageForDrivers, boolean coverageForPassengers) {
+    public CarInsurance(String carMake, String carModel,int carAge, boolean coverageForDrivers, boolean coverageForPassengers) {
         //super(name, price, startDate, endDate);
         //yukardaki nesneleri almak yerine onların alacağı değerleri yazdım
         super("Car Insurance", 800, LocalDate.now(), LocalDate.now().plusMonths(12));
@@ -21,6 +21,7 @@ public class CarInsurance extends Insurance{
         this.coverageForDrivers = coverageForDrivers;
         this.coverageForPassengers = coverageForPassengers;
     }
+
 
     public String getCarMake() {
         return carMake;

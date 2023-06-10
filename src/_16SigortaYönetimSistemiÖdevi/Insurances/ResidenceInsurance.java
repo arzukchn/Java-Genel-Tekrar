@@ -8,7 +8,7 @@ public class ResidenceInsurance extends Insurance{
     double buildingValue;
     double contentValue;
 
-    public ResidenceInsurance(String name, double price, LocalDate startDate, LocalDate endDate, double buildingValue, double contentValue) {
+    public ResidenceInsurance(double buildingValue, double contentValue) {
         super("Residence Insurance", 2000, LocalDate.now(), LocalDate.now().plusMonths(12));
         this.buildingValue = buildingValue;
         this.contentValue = contentValue;

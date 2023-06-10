@@ -27,15 +27,17 @@ public abstract class Account implements Comparable<Account> {
             throw new InvalidAuthenticationException("Invalid account");
         }
     }
-    public void addAddress(Address address) {
-        if (authenticationStatus == AuthenticationStatus.SUCCESS) {
-            user.addAddress(address);
+
+    public void addAdress(Adress adress){
+        if (authenticationStatus == AuthenticationStatus.SUCCESS){
+            user.addAdress(adress);
         }
     }
 
-    public void removeAddress(Address address) {
-        if (authenticationStatus == AuthenticationStatus.SUCCESS) {
-            user.removeAddress(address);
+
+    public void removeAdress(Adress adress){
+        if (authenticationStatus == AuthenticationStatus.SUCCESS){
+            user.removeAdress(adress);
         }
     }
 
@@ -51,16 +53,16 @@ public abstract class Account implements Comparable<Account> {
         System.out.println("Surname: " + user.getSurname());
         System.out.println("Email: " + user.getEmail());
         System.out.println("Password: " + user.getPassword());
-        System.out.println("Profession: " + user.getProfession());
+        System.out.println("Profession: " + user.getJob());
         System.out.println("Age: " + user.getAge());
         user.updateLastLogin();
-        System.out.println("Last login date: " + user.getLastLogin());
+        System.out.println("Last login date: " + user.getLastLoginDate());
         if (this instanceof Enterprise) {
             System.out.println("Company Name: " + ((Enterprise) this).getCompanyName());
         }
         System.out.println("Addresses: ");
         System.out.println("------------------------------------------");
-        for (Address address : user.getAddresses()) {
+        for (Adress address : user.getAdresses()) {
             System.out.println(address);
         }
         System.out.println("Insurances: ");

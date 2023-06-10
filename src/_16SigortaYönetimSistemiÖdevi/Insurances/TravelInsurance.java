@@ -9,8 +9,8 @@ public class TravelInsurance extends Insurance {
     private List<String> coveredCountries;
     private int duration;
 
-    public TravelInsurance(String name, double price, LocalDate startDate, LocalDate endDate, List<String> coveredCountries, int duration) {
-        super(name, price, startDate, endDate);
+    public TravelInsurance(List<String> coveredCountries, int duration) {
+        super("Travel Insurance", 1200, LocalDate.now(), LocalDate.now().plusYears(1));
         this.coveredCountries = coveredCountries;
         this.duration = duration;
     }

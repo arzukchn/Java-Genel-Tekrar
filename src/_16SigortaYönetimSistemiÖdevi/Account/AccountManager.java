@@ -22,8 +22,17 @@ public class AccountManager {
         for (Account account : accountList){
             try{
                 account.login(email, password);
-
+                if (account.getAuthenticationStatus() == Account.AuthenticationStatus.SUCCESS){
+                    return account;
+                }
+            }catch (InvalidAuthenticationException e){
+                System.out.println(e.getMessage());
             }
         }
+        return null;
+    }
+
+    public TreeSet<Account> getAccountList(){
+        return accountList;
     }
 }

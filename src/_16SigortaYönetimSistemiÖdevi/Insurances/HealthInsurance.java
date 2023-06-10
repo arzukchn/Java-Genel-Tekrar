@@ -10,7 +10,7 @@ public class HealthInsurance extends Insurance{
     private double coverageLimit;
 
 
-    public HealthInsurance(String name, double price, LocalDate startDate, LocalDate endDate, String healthCondition, boolean coverageForPreExistingCondition, double coverageLimit) {
+    public HealthInsurance(String healthCondition,boolean coverageForPreExistingCondition, double coverageLimit) {
         super("Health Insurance", 100, LocalDate.now(), LocalDate.now().plusMonths(12));
         this.healthCondition = healthCondition;
         this.coverageForPreExistingCondition = coverageForPreExistingCondition;

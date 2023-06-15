@@ -3,7 +3,7 @@ package _17Input_Output_İşlemleri;
 import java.io.File;
 import java.io.IOException;
 
-public class FileSınıfı {
+public class _1_FileSınıfı {
     public static void main(String[] args) {
         //Burda pathname kısmına "src/patika.txt" gibi bişey yazarsanız src içinde oluşturulur.
         //Yani bu şekilde dosyanın nerede oluşturulacağını seçebiliriz.

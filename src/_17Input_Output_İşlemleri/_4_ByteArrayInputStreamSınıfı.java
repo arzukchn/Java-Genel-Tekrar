@@ -3,7 +3,7 @@ package _17Input_Output_İşlemleri;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-public class _4_ByteArrayStreamSınıfı {
+public class _4_ByteArrayInputStreamSınıfı {
     public static void main(String[] args) {
         byte[] dizi = {1,2,3,4,5,6};
         //Alttaki kısımda offset ile dizinin nerden başlanacağı, length ile de başladıktan sonra kaç adet eleman ile devam edeceği seçilir.
